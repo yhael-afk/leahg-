@@ -1,0 +1,72 @@
+
+header {
+    position: sticky; /* Sticks the header to the top */
+    top: 0; /* Positions at the very top */
+    z-index: 1000; /* Keeps it above other content */
+    width: 100%;
+    background-color: rgba(20, 40, 63, 0.9); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Adds a blur effect */
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+header nav ul {
+    display: flex;
+    justify-content: center; /* Center-align the navigation items */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+header nav ul li {
+    margin: 0 15px; /* Space between navigation links */
+}
+  
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+  
+header nav ul li a:hover {
+    background-color: #345377; /* Highlight effect on hover */
+    border-radius: 4px; /* Rounded corners for hover effect */
+}
+  
+  /* Navigation Container */
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+}
+  
+  /* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between links */
+    margin: 0;
+    padding: 0;
+}
+  
+.nav-links li {
+    display: inline-block;
+}
+  
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+  
+.nav-links a:hover {
+    background-color: #345377;
+    color: #fff;
+}

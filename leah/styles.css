@@ -1,0 +1,794 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+}
+
+
+header nav ul {
+  display: flex;
+  justify-content: center; /* Center-align the navigation items */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 15px; /* Space between navigation links */
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  background-color: #345377; /* Highlight effect on hover */
+  border-radius: 4px; /* Rounded corners for hover effect */
+}
+
+/* Navigation Container */
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Space between links */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #345377;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+  }
+}
+
+/* Home Section Styles */
+#home {
+  background-image: url('C:\xampp\htdocs\proj\filipino-food.jpg'); /* Update the path as needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; /* Ensure the image doesn't repeat */
+  background-attachment: fixed; /* Optional: Create a parallax effect */
+  min-height: 100vh; /* Ensure it covers the full height of the viewport */
+  width: 100%; /* Full width */
+  color: white;
+  padding: 100px 40px;
+  text-align: center;
+  position: relative;
+}
+
+#home h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#home p {
+  font-size: 1.5em;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+#home .btn-home {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 30px;
+  background-color: #333;
+  color: white;
+  font-size: 1.2em;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+#home .btn-home:hover {
+  background-color: #555;
+}
+
+/* About Section Styles */
+#about {
+  background: linear-gradient(to bottom, #ffe4b5, #ffcc80); /* Soft gradient for a warm feel */
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+#about h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #7a5333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#about p {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+  line-height: 1.8;
+  color: #5f4b32;
+}
+
+#about .about-image {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  background: url('filipino-food.jpg') no-repeat center center;
+  background-size: cover;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#about .btn-about {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #7a5333;
+  color: #fff;
+  font-size: 1.2em;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+#about .btn-about:hover {
+  background-color: #5f3c25;
+}
+
+
+/* Blog Posts Section Styles */
+article {
+  background-color:  #9078d4;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Post Layout Styles */
+.post {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+/* Flexbox for Image and Text Layout */
+.post-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between the image and text */
+}
+
+/* Image Styling */
+.post-image {
+  flex: 1;
+  max-width: 40%; /* Image takes 40% of the width */
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Text Content Styling */
+.post-text {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(240, 240, 240, 0.9));
+  border-radius: 0 10px 10px 0; /* Rounded corners on the right */
+}
+
+/* Title Styling */
+.post-title {
+  font-size: 1.8em;
+  color: #7a9f79;
+  margin-bottom: 10px;
+}
+
+/* Paragraph Styling */
+.post-text p {
+  font-size: 1em;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Ingredients and Instructions */
+.post-text h4 {
+  font-size: 1.2em;
+  color: #333;
+  margin-top: 20px;
+}
+
+.post-text ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 10px;
+}
+
+/* Like Button Styling */
+.like-btn {
+  background-color: #7a9f79;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.like-btn:hover {
+  background-color: #5f8057;
+}
+
+/* Comments Section */
+.comments-section {
+  margin-top: 15px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+.comments-section button {
+  padding: 10px 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.comments-section button:hover {
+  background-color: #555;
+}
+
+.comments-section ul {
+  margin-top: 10px;
+  list-style-type: none;
+  padding-left: 0;
+}
+/* Categories Section Styles */
+#categories h3 {
+  font-size: 2em;
+  color:  #7a9f79;
+  margin-bottom: 20px;
+}
+
+ul.categories {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul.categories li {
+  margin: 10px 0;
+}
+
+ul.categories li a {
+  display: block;
+  padding: 10px;
+  background-color: #f4f4f4;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+ul.categories li a:hover {
+  background-color: #7a9f79;
+  transform: translateY(-3px);
+  color: white;
+}
+
+/* Styles for hidden category content */
+.hidden-category-content {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Header Styles for each category */
+.hidden-category-content h3 {
+  font-size: 1.8em;
+  color:  #7a9f79;
+  margin-bottom: 10px;
+}
+
+/* Paragraph Styles for each category */
+.hidden-category-content p {
+  font-size: 1.2em;
+  color: #333;
+}
+
+/* Specific Styling for Recipes Container */
+#recipes-container {
+  background-color: #ffe4e1;
+}
+
+/* Specific Styling for Dessert Container */
+#dessert-container {
+  background-color: #f0e68c;
+}
+
+/* Specific Styling for Budget-Friendly Meals Container */
+#budget-container {
+  background-color: #e6ffe6;
+}
+
+/* Specific Styling for Vegetarian Container */
+#vegetarian-container {
+  background-color: #e0f7fa;
+}
+/* General styling for the box grid */
+.box-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columns */
+  gap: 20px; /* Space between the boxes */
+  margin-top: 20px;
+}
+
+/* Box styling with small images and text inside */
+.box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.box:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.box-image-small {
+  width: 100px; /* Small image size */
+  height: 100px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.box-content {
+  padding: 10px;
+}
+
+.box-title {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.box-description {
+  font-size: 0.9em;
+  color: #666;
+  line-height: 1.4;
+}
+
+
+/* Redesigned Sign Up Section Styles */
+#signup {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+#signup-form {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  max-width: 420px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+#signup-form h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#signup-form label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+  display: block;
+}
+
+#signup-form input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+#signup-form input:focus {
+  border-color: #feb47b;
+  outline: none;
+}
+
+#signup-form button {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#signup-form button:hover {
+  background-color: #0056b3;
+}
+
+#signup-form .additional-links {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+
+#signup-form .additional-links a {
+  color: #ff7e5f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#signup-form .additional-links a:hover {
+  text-decoration: underline;
+}
+
+.signup-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 380px; /* Adjusted width for better fit */
+  width: 100%;
+  text-align: center;
+}
+
+.signup-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 0px; /* Spacing between fields */
+}
+
+.signup-container label {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left; 
+}
+
+.signup-container input {
+  width: 90%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.signup-container button {
+  padding: 12px;
+  background-color: #333;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.signup-container button:hover {
+  background-color: #555;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.success {
+  color: green;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  #signup-form {
+    padding: 30px;
+  }
+
+  #signup-form h2 {
+    font-size: 20px;
+  }
+
+  #signup-form input {
+    padding: 12px;
+  }
+
+  #signup-form button {
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+/* Footer Section */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.content-section {
+  width: 80%;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form input, form button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+form button {
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #555;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
+
+.success {
+  color: green;
+  text-align: center;
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #555;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+header nav a:hover {
+  background-color: #444;
+}
+
+/* Main Layout */
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+main p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Button Styles */
+button, a.button {
+  text-decoration: none;
+  color: white;
+  background-color: #333;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  display: inline-block;
+}
+
+button:hover, a.button:hover {
+  background-color: #555;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #333;
+  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  main p {
+    font-size: 1rem;
+  }
+}
+ 
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+section {
+  padding: 1rem;
+}
+
+h2 {
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 1rem;
+}
+
+button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #555;
+}
